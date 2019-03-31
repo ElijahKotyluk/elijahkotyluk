@@ -17,6 +17,7 @@
     "cross-env": "^5.2.0",
     "node-dir": "^0.1.17",
     "nuxt": "^2.4.0",
+    "theaterjs": "^3.2.0",
     "vuetify": "^1.5.5",
     "vuetify-loader": "^1.2.1"
   },

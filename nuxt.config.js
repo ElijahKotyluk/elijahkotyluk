@@ -33,7 +33,7 @@ function returnRoutes() {
 
         files.forEach(function (file) {
             var name = file.substr(0, file.lastIndexOf('.'));
-            var path = '/dynamic/' + name
+            var path = '/posts/' + name
             return path
         });
     });
@@ -41,7 +41,7 @@ function returnRoutes() {
 
 function getSlugs(post, index) {
   let slug = post.substr(0, post.lastIndexOf('.'));
-  return `/dynamic/${slug}`
+  return `/posts/${slug}`
 }
 
 export default {

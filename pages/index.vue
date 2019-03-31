@@ -9,65 +9,84 @@
       sm8
       md6
     >
-      <div class="text-xs-center">
-        <logo />
-        <vuetify-logo />
-      </div>
       <v-card>
-        <v-card-title class="headline">Welcome to the Vuetify + Nuxt.js template</v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>For more information on Vuetify, check out the <a
-            href="https://vuetifyjs.com"
-            target="_blank"
-          >documentation</a>.</p>
-          <p>If you have questions, please join the official <a
-            href="https://chat.vuetifyjs.com/"
-            target="_blank"
-            title="chat"
-          >discord</a>.</p>
-          <p>Find a bug? Report it on the github <a
-            href="https://github.com/vuetifyjs/vuetify/issues"
-            target="_blank"
-            title="contribute"
-          >issue board</a>.</p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
+
+        <div class="text-xs-center intro-zoom pt-2">
+          <p class="display-1 pt-3">
+            Elijah Kotyluk
+          </p>
+        </div>
+
+        <!-- Avatar -->
+        <v-layout column align-center>
+          <v-avatar class="elevation-12 intro-zoom"
+                    size="185"
+                    id="avatar">
+            <img src="../static/me.png" alt="avatar" />
+          </v-avatar>
+        </v-layout>
+
+        <!-- Intro Name/Title -->
+          <div class="text-xs-center mt-4 intro-zoom">
+            <p class="subheading">
+              developer - 26 - Davis, CA
+            </p>
           </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-          >Nuxt Documentation</a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-          >Nuxt GitHub</a>
-        </v-card-text>
+
+          <typer-text />
+
+        <!-- Social Links -->
+          <div class="text-xs-center intro-zoom">
+              <a href="https://www.linkedin.com/in/elijahkotyluk"
+                 class="pa-2 social-link"
+                 target="_blank">
+                <fa :icon="['fab', 'linkedin']" style="font-size: 36px" />
+              </a>
+              <a href="https://twitter.com/ElijahDavidK"
+                 class="pa-2 social-link"
+                 target="_blank">
+                <fa :icon="['fab', 'twitter']" style="font-size: 36px" />
+              </a>
+              <a href="https://github.com/ElijahKotyluk"
+                 class="pa-2 social-link"
+                 target="_blank">
+                <fa :icon="['fab', 'gitkraken']" style="font-size: 36px"/>
+              </a>
+          </div>
+
         <v-card-actions>
           <v-spacer />
           <v-btn
             color="primary"
             flat
             nuxt
-            to="/inspire"
-          >Continue</v-btn>
+            to="/blog"
+          >My Blog</v-btn>
         </v-card-actions>
       </v-card>
+
+      <div class="text-xs-center mt-5">
+        <p>
+          This site is powered by:
+        </p>
+        <nuxt-logo />
+        <vuetify-logo />
+      </div>
+
     </v-flex>
   </v-layout>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import NuxtLogo from '~/components/animations/NuxtLogo.vue';
+import VuetifyLogo from '~/components/animations/VuetifyLogo.vue';
+import TyperText from '~/components/animations/TyperText.vue';
 
 export default {
   components: {
-    Logo,
-    VuetifyLogo
+    NuxtLogo,
+    VuetifyLogo,
+    TyperText
   }
 }
 </script>

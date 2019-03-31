@@ -48,7 +48,7 @@
       >
         <v-icon>remove</v-icon>
       </v-btn>
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title class="site-title" v-text="title" />
       <v-spacer />
       <v-btn
         icon
@@ -62,21 +62,6 @@
         <nuxt />
       </v-container>
     </v-content>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-tile @click.native="right = !right">
-          <v-list-tile-action>
-            <v-icon light>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
     <v-footer
       :fixed="fixed"
       app
@@ -118,7 +103,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'elijahkotyluk.com'
     }
   },
   beforeRouteLeave(to, from, next) {
@@ -126,3 +111,23 @@ export default {
   }
 }
 </script>
+
+<style>
+.site-title {
+  -webkit-animation: flicker 2s infinite;
+  text-align:center;
+  margin-top:3em;
+  font-family:'Lato', sans-serif;
+  font-size:3em;
+}
+
+@-webkit-keyframes flicker
+{
+0% {opacity:0;}
+9% {opacity:0;}
+10% {opacity:.5;}
+13% {opacity:0;}
+20% {opacity:.5;}
+25% {opacity:1;}
+}
+</style>

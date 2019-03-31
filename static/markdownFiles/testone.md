@@ -5,8 +5,22 @@ They are imported using webpack's import capability and loadered with the markdo
 This content you are reading at this very moment is actually a markdown file. It's titled home.md and can find it in the **markdownFiles** directory.
 
 Inside the **markdownFiles** directory, you will find 2 other files
-- testone.md
-- testtwo.md
+<ul>
+  <li style="text-align: left">testone.md</li>
+  <li style="text-align: left">testtwo.md</li>
+</ul>
 
-They are used to show the dynamic import ability of webpack and that can be seen in **posts/_slug.vue**
-Pretty cool huh?
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+```
+No language indicated, so no syntax highlighting.
+But let's throw in a <b>tag</b>.
+```
