@@ -11,12 +11,16 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/markdownit": "^1.2.3",
     "@nuxtjs/pwa": "^2.6.0",
     "cross-env": "^5.2.0",
     "node-dir": "^0.1.17",
     "nuxt": "^2.4.0",
+    "nuxt-fontawesome": "^0.4.0",
     "theaterjs": "^3.2.0",
     "vuetify": "^1.5.5",
     "vuetify-loader": "^1.2.1"

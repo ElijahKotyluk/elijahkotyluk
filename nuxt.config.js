@@ -82,7 +82,16 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    ['@nuxtjs/markdownit', { linkify: true }]
+    ['@nuxtjs/markdownit', { linkify: true }],
+    ['nuxt-fontawesome', {
+    component: 'fa',
+    imports: [
+      {
+        set: '@fortawesome/fontawesome-free-brands',
+        icons: ['faGitkraken', 'faLinkedin', 'faTwitter']
+      }
+    ]
+  }]
   ],
 
   // Axios module:
