@@ -70,7 +70,8 @@ export default {
 
   // Global css:
   css: [
-    '~/assets/style/app.styl'
+    '~/assets/style/app.styl',
+    '~/assets/css/main.css'
   ],
 
   // Loaded before app mounts:
