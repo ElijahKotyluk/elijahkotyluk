@@ -71,7 +71,7 @@ export default {
   // Global css:
   css: [
     '~/assets/style/app.styl',
-    '~/assets/css/main.css'
+    '~/assets/style/main.css'
   ],
 
   // Loaded before app mounts:
@@ -96,7 +96,11 @@ export default {
   ],
 
   // Axios module:
-  axios: {
+  axios: {},
+
+  // Transitions:
+  transition : {
+    name: 'layout'
   },
 
   // Generate static routes:

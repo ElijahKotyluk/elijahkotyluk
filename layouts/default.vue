@@ -1,12 +1,10 @@
 <template>
   <v-app dark>
     <v-toolbar
-      color="rgba(0, 0, 0, 0)"
-      elevation="0"
       fixed
       app
     >
-      <v-toolbar-title class="site-title" v-text="title" />
+      <v-toolbar-title class="toolbar-title" v-text="title" />
       <v-spacer />
       <v-btn
         icon
@@ -28,28 +26,54 @@
       temporary
       fixed
     >
-    <v-list-tile @click.native="right = !right">
-      <v-list-tile-action>
-        <v-icon light>compare_arrows</v-icon>
-      </v-list-tile-action>
-      <v-list-tile-title>Switch drawer</v-list-tile-title>
-    </v-list-tile>
-    <v-list>
-      <v-list-tile
-        v-for="(item, i) in items"
-        :key="i"
-        :to="item.to"
-        router
-        exact
-      >
+      <v-list-tile @click.native="right = !right">
         <v-list-tile-action>
-          <v-icon>{{ item.icon }}</v-icon>
+          <v-icon light>compare_arrows</v-icon>
         </v-list-tile-action>
-        <v-list-tile-content>
-          <v-list-tile-title v-text="item.title" />
-        </v-list-tile-content>
+        <v-list-tile-title>Switch drawer</v-list-tile-title>
       </v-list-tile>
-    </v-list>
+
+
+      <v-list>
+        <v-list-tile
+          v-for="(item, i) in items"
+          :key="i"
+          :to="item.to"
+          nuxt
+          ripple
+        >
+          <v-list-tile-action>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title v-text="item.title" />
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+
+      <v-list>
+        <v-list-group prepend-icon="insert_drive_file">
+          <template v-slot:activator>
+            <v-list-tile>
+              <v-list-tile-title>Blog Posts</v-list-tile-title>
+            </v-list-tile>
+          </template>
+
+            <v-list-tile
+              v-for="(blog, i) in blogs"
+              :key="i"
+              :to="blog.to"
+              nuxt
+              ripple
+            >
+              <v-list-tile-action>
+                <v-icon v-text="blog.icon"></v-icon>
+              </v-list-tile-action>
+
+              <v-list-tile-title v-text="blog.title"></v-list-tile-title>
+            </v-list-tile>
+        </v-list-group>
+      </v-list>
     </v-navigation-drawer>
 
     <v-footer
@@ -78,7 +102,9 @@ export default {
           icon: 'bubble_chart',
           title: 'Blog',
           to: '/blog'
-        },
+        }
+      ],
+      blogs: [
         {
           icon: 'comment',
           title: 'Blog-post-1',
@@ -103,18 +129,4 @@ export default {
 </script>
 
 <style>
-.site-title {
-  -webkit-animation: flicker 2s infinite;
-  text-align:center;
-}
-
-@-webkit-keyframes flicker
-{
-0% {opacity:0;}
-9% {opacity:0;}
-10% {opacity:.5;}
-13% {opacity:0;}
-20% {opacity:.5;}
-25% {opacity:1;}
-}
 </style>
