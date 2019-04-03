@@ -25,8 +25,9 @@
 <script>
 export default {
   async asyncData ({params}) {
+
     const fileContent = await import(`~/static/markdownFiles/${params.slug}.md`)
-    console.log(fileContent)
+    
     return {
       content: fileContent
     }

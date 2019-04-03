@@ -14,15 +14,17 @@
         color="rgba(0, 0, 0, 0)"
         elevation="0">
 
+      <typewriter />
+
         <!-- Avatar -->
         <v-layout column align-center>
-          <v-avatar class="elevation-12 mt-5 mb-1 intro-zoom"
+          <v-avatar class="elevation-12 mt-5 mb-1"
                     size="185"
                     id="avatar">
             <img src="../static/me.png" alt="avatar" />
           </v-avatar>
 
-          <div class="text-xs-center mt-4 intro-zoom">
+          <div class="text-xs-center mt-4">
             <p class="subheading">
               developer - 26 - Davis, CA
             </p>
@@ -30,7 +32,7 @@
         </v-layout>
 
         <!-- Social Links -->
-        <div class="text-xs-center mt-2 mb-5 intro-zoom">
+        <div class="text-xs-center mt-2 mb-5">
           <a href="https://www.linkedin.com/in/elijahkotyluk"
              class="pa-2 social-link"
              target="_blank">
@@ -47,14 +49,12 @@
             <fa :icon="['fab', 'gitkraken']" style="font-size: 36px"/>
           </a>
         </div>
-
-        <typewriter />
       </v-card>
 
-      <div class="text-xs-center mt-5 intro-zoom">
+      <div class="text-xs-center mt-3">
         <v-btn
-          color="rgba(12, 183, 207, .5)"
-          flat
+          class="mb-4"
+          color="rgba(12, 183, 207, .2)"
           nuxt
           to="/blog"
         >My Blog</v-btn>
@@ -84,23 +84,12 @@ export default {
 </script>
 
 <style>
-@keyframes zoom-in-out {
-    0% {
-        transform: scale(.3, .3);
-    }
-    50% {
-        transform: scale(1.1, 1.1);
-    }
-    100% {
-        transform: scale(1, 1);
-    }
-}
-
-.intro-zoom {
-	animation: zoom-in-out 1.5s;
-}
 
 .social-link {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(202, 202, 202, 0.6);
+}
+
+svg.svg-inline--fa:hover {
+  color: rgba(0, 0, 0, 1)
 }
 </style>
