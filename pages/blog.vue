@@ -1,55 +1,37 @@
 <template>
   <v-container>
-    <v-layout row>
+    <v-layout row wrap>
       <v-flex xs12 class="text-xs-center">
         <p class="display-1 font-weight-light mt-3 mb-5">
           My Blog
         </p>
       </v-flex>
-    </v-layout>
 
-    <v-layout row wrap>
-      <v-flex xs12 md6 lg6 v-for="(blog, i) in blogs" :key="i">
-        <v-hover>
-          <v-card class="my-5 mx-4"
-                  slot-scope="{ hover }"
-                  :class="`elevation-${hover ? 18 : 2}`"
-                  >
-            <v-img
-              :src="blog.img"
-              aspect-ratio="2.75"
-              ></v-img>
-
-            <v-card-title primary-title>
-              <div>
-                <h3 class="headline mb-0"> {{ blog.title }} </h3>
-                <div> {{ blog.description }} </div>
-              </div>
-            </v-card-title>
-
-            <v-card-actions>
-              <v-btn color="rgba(12, 183, 207, .5)"
-                     :to="blog.to"
-                     nuxt
-                     ripple
-              >Read</v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-hover>
-      </v-flex>
+      <blog-post-card v-for="(post, i) in posts"
+                      :key="post.i"
+                      :img="post.img"
+                      :title="post.title"
+                      :date="post.date"
+                      :to="post.to"
+                      :description="post.description"/>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import BlogPostCard from '~/components/blog/BlogPostCard.vue';
+
 import TestOne from '~/static/markdownFiles/testone.md';
 // <div class="dynamic-markdown-content" v-html="content" />
 
 export default {
+  components: {
+    BlogPostCard
+  },
   data () {
     return {
       content: TestOne,
-      blogs: [
+      posts: [
         {
           img: require('~/static/nuxt.png'),
           title: 'Blog-post-1',
