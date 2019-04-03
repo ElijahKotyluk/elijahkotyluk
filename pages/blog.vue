@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-layout>
+    <v-layout row>
       <v-flex xs12 class="text-xs-center">
         <p class="display-1 font-weight-light mt-3 mb-5">
           My Blog
@@ -9,17 +9,20 @@
     </v-layout>
 
     <v-layout row wrap>
-      <v-flex xs6 v-for="(blog, i) in blogs" :key="i">
+      <v-flex xs12 md6 lg6 v-for="(blog, i) in blogs" :key="i">
         <v-hover>
-          <v-card class="my-5 mx-2" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+          <v-card class="my-5 mx-4"
+                  slot-scope="{ hover }"
+                  :class="`elevation-${hover ? 18 : 2}`"
+                  >
             <v-img
-              src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+              :src="blog.img"
               aspect-ratio="2.75"
-            ></v-img>
+              ></v-img>
 
             <v-card-title primary-title>
               <div>
-                <h3 class="headline mb-0">{{ blog.title }}</h3>
+                <h3 class="headline mb-0"> {{ blog.title }} </h3>
                 <div> {{ blog.description }} </div>
               </div>
             </v-card-title>
@@ -48,12 +51,14 @@ export default {
       content: TestOne,
       blogs: [
         {
+          img: require('~/static/nuxt.png'),
           title: 'Blog-post-1',
           date: '3/23/2019',
           to: '/posts/testone',
           description: 'This is my sample blog description to test out the layout of this static page.'
         },
         {
+          img: require('~/static/nuxt.png'),
           title: 'Blog-post-2',
           date: '4/2/2019',
           to: '/posts/testtwo',
