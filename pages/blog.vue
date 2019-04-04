@@ -33,14 +33,14 @@ export default {
       content: TestOne,
       posts: [
         {
-          img: require('~/static/nuxt.png'),
+          img: require('~/static/photos/blogs/nuxtMDpost.png'),
           title: 'Markdown blog with Nuxt:',
           date: '3/23/2019',
           to: '/posts/testone',
           description: 'In my first blog post I will show you how to create a static blog site with Nuxt and markdown files.'
         },
         {
-          img: require('~/static/nuxt.png'),
+          img: require('~/static/photos/blogs/nuxtMDpost.png'),
           title: 'Blog-post-2',
           date: '4/2/2019',
           to: '/posts/testtwo',

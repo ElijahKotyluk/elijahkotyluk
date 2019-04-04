@@ -19,7 +19,7 @@
           <v-avatar class="elevation-12 mt-5 mb-1"
                     size="185"
                     id="avatar">
-            <img src="../static/me.png" alt="avatar" />
+            <img src="../static/photos/me.png" alt="avatar" />
           </v-avatar>
 
           <div class="text-xs-center mt-4">

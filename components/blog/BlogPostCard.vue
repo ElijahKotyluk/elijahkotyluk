@@ -23,7 +23,7 @@
           <v-card-actions>
             <v-spacer></v-spacer>
             <p>
-              Read...
+              Go to post...
             </p>
           </v-card-actions>
         </v-card>
