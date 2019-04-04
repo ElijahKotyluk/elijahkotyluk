@@ -14,8 +14,6 @@
         color="rgba(0, 0, 0, 0)"
         elevation="0">
 
-      <typewriter />
-
         <!-- Avatar -->
         <v-layout column align-center>
           <v-avatar class="elevation-12 mt-5 mb-1"
@@ -72,13 +70,11 @@
 <script>
 import NuxtLogo from '~/components/animations/NuxtLogo.vue';
 import VuetifyLogo from '~/components/animations/VuetifyLogo.vue';
-import Typewriter from '~/components/animations/Typewriter.vue';
 
 export default {
   components: {
     NuxtLogo,
-    VuetifyLogo,
-    Typewriter
+    VuetifyLogo
   }
 }
 </script>
@@ -90,6 +86,6 @@ export default {
 }
 
 svg.svg-inline--fa:hover {
-  color: rgba(0, 0, 0, 1)
+  color: rgba(0, 0, 0, 1);
 }
 </style>

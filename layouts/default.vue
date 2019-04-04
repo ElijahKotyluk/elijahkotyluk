@@ -4,7 +4,7 @@
       fixed
       app
     >
-      <v-toolbar-title class="toolbar-title" v-text="title" />
+      <v-toolbar-title class="toolbar-title font-weight-light" v-text="title" />
       <v-spacer />
       <v-btn
         icon

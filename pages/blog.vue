@@ -2,8 +2,8 @@
   <v-container>
     <v-layout row wrap>
       <v-flex xs12 class="text-xs-center">
-        <p class="display-1 font-weight-light mt-3 mb-5">
-          My Blog
+        <p class="display-1 font-weight-medium mt-3 mb-5">
+          Blog
         </p>
       </v-flex>
 
@@ -34,10 +34,10 @@ export default {
       posts: [
         {
           img: require('~/static/nuxt.png'),
-          title: 'Blog-post-1',
+          title: 'Markdown blog with Nuxt:',
           date: '3/23/2019',
           to: '/posts/testone',
-          description: 'This is my sample blog description to test out the layout of this static page.'
+          description: 'In my first blog post I will show you how to create a static blog site with Nuxt and markdown files.'
         },
         {
           img: require('~/static/nuxt.png'),
