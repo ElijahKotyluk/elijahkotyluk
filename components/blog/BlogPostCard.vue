@@ -1,9 +1,11 @@
 <template>
     <v-flex xs12 md6 lg6>
       <v-hover>
-        <v-card class="my-5 mx-4"
+        <v-card class="my-5 mx-4 box grow card-border"
                 slot-scope="{ hover }"
-                :class="`elevation-${hover ? 18 : 2}`"
+                :class="`elevation-${hover ? 20 : 6}`"
+                :to="to"
+                nuxt
                 >
           <v-img
             :src="img"
@@ -11,18 +13,18 @@
             ></v-img>
 
           <v-card-title primary-title>
-            <div>
-              <h3 class="headline mb-0"> {{ title }} </h3>
-              <div> {{ description }} </div>
-            </div>
+            <p class="headline mb-0"> {{ title }} </p>
           </v-card-title>
 
+          <v-card-text>
+            <p> {{ description }} </p>
+          </v-card-text>
+
           <v-card-actions>
-            <v-btn color="rgba(12, 183, 207, .5)"
-                   :to="to"
-                   nuxt
-                   ripple
-            >Read</v-btn>
+            <v-spacer></v-spacer>
+            <p>
+              Read...
+            </p>
           </v-card-actions>
         </v-card>
       </v-hover>
@@ -46,3 +48,18 @@ export default {
   }
 }
 </script>
+
+<style>
+.grow:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.card-border:hover {
+  border-style: solid;
+  border-width: thick;
+  border-color: rgba(0, 0, 0, .7);
+  color: black;
+}
+</style>
