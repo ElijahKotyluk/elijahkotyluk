@@ -71,7 +71,7 @@ export default {
   // Global css:
   css: [
     '~/assets/style/app.styl',
-    '~/assets/style/main.css'
+    { '~/assets/scss/main.scss', lang: 'scss' }
   ],
 
   // Loaded before app mounts:
