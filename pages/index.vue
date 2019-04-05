@@ -30,23 +30,7 @@
         </v-layout>
 
         <!-- Social Links -->
-        <div class="text-xs-center mt-2 mb-5">
-          <a href="https://www.linkedin.com/in/elijahkotyluk"
-             class="pa-2 social-link"
-             target="_blank">
-            <fa :icon="['fab', 'linkedin']" style="font-size: 36px" />
-          </a>
-          <a href="https://twitter.com/ElijahDavidK"
-             class="pa-2 social-link"
-             target="_blank">
-            <fa :icon="['fab', 'twitter']" style="font-size: 36px" />
-          </a>
-          <a href="https://github.com/ElijahKotyluk"
-             class="pa-2 social-link"
-             target="_blank">
-            <fa :icon="['fab', 'gitkraken']" style="font-size: 36px"/>
-          </a>
-        </div>
+        <social-bar />
       </v-card>
 
       <div class="text-xs-center mt-3">
@@ -55,7 +39,9 @@
           color="rgba(12, 183, 207, .2)"
           nuxt
           to="/blog"
-        >My Blog</v-btn>
+          >
+          My Blog
+        </v-btn>
         <p>
           This site is powered by:
         </p>
@@ -70,19 +56,26 @@
 <script>
 import NuxtLogo from '~/components/animations/NuxtLogo.vue';
 import VuetifyLogo from '~/components/animations/VuetifyLogo.vue';
+import SocialBar from '~/components/widgets/SocialBar.vue';
 
 export default {
   components: {
     NuxtLogo,
+    SocialBar,
     VuetifyLogo
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 
 .social-link {
-  color: rgba(202, 202, 202, 0.6);
+  color: black;
+}
+
+.fab-linkedin g g path {
+  stroke: white;
+  stroke-width: 2;
 }
 
 svg.svg-inline--fa:hover {
