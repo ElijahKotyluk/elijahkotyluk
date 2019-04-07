@@ -23,7 +23,7 @@ export default {
     },
     fontSize: {
       type: [String],
-      default: '32px'
+      default: '34px'
     },
     width: {
       type: [Number, String],
@@ -35,15 +35,15 @@ export default {
     },
     iconColor: {
       type: String,
-      default: 'none'
+      default: 'rgba(0, 0, 0, 0)'
     },
     strokeColor: {
       type: String,
-      default: 'white'
+      default: 'rgba(255, 255, 255, 1)'
     },
     strokeWidth: {
       type: [Number, String],
-      default: 3
+      default: 7
     }
   }
 }
@@ -56,5 +56,9 @@ svg {
   width: 1.1875em;
   vertical-align: -.125em;
   margin-bottom: -2px;
+}
+
+:hover {
+  stroke: #000;
 }
 </style>
