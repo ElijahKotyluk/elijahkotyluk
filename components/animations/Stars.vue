@@ -1,28 +1,26 @@
 <template>
-  <canvas id="tentacles">
+  <canvas id="stars">
   </canvas>
 </template>
 
 <script>
-import tentacles from '~/plugins/tentacles.js';
+import  outerSpace from '~/plugins/outerSpace.js';
 
 export default {
-  name: 'Background',
+  name: 'Stars',
   mounted() {
-    tentacles();
+    outerSpace();
   }
 }
 </script>
 
 <style lang="scss" scoped>
-#tentacles {
+#stars {
   top: 0px;
   left: 0px;
 	width: 100%;
 	height: 100%;
-	cursor: pointer;
 	position: absolute;
   background-size: cover;
-	background: "rgba(0, 0, 0, 0)";
 }
 </style>

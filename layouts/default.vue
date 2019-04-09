@@ -4,20 +4,21 @@
 
     <background />
 
+    <stars />
     <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-content>
   </v-app>
 </template>
 
 <script>
 import Toolbar from '~/components/toolbar/Toolbar.vue';
-import Background from '~/components/animations/background.vue';
+import Background from '~/components/animations/Background.vue';
+import Stars from '~/components/animations/Stars.vue';
 
 export default {
   components: {
+    Stars,
     Toolbar,
     Background
   },
