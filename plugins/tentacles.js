@@ -1,5 +1,5 @@
 export default function tentacles() {
-  const colorArray = ['rgba(82, 14, 158, .15)', 'rgba(12, 183, 207, .15)']
+  const colorArray = ['rgba(12, 183, 207, .2)']
 
   const randomColor = () => {
     return colorArray[Math.floor(Math.random() * colorArray.length)];
@@ -27,7 +27,7 @@ export default function tentacles() {
         requestAnimationFrame(this.draw.bind(this));
         ctx.beginPath();
         ctx.arc(this.px, this.py, radius, 0, 2 * Math.PI);
-        ctx.fillStyle = "rgba(24, 22, 22, 0.6)";
+        ctx.fillStyle = "rgba(24, 22, 22, 1)";
         ctx.fill();
         ctx.strokeStyle = randomColor();
         ctx.stroke();

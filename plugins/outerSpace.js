@@ -1,6 +1,12 @@
 export default function outerSpace() {
 
       //Helpers
+      const colorArray = ['rgba(118, 49, 194, 0.8)', 'rgba(34, 183, 204, 0.8)', 'rgba(50, 0, 0, 0.8)']
+
+      function randomColor() {
+        return colorArray[Math.floor(Math.random() * colorArray.length)];
+      }
+
       function lineToAngle(x1, y1, length, radians) {
           var x2 = x1 + length * Math.cos(radians),
               y2 = y1 + length * Math.sin(radians);
@@ -72,16 +78,16 @@ export default function outerSpace() {
           ],
           starsAngle = 145,
           shootingStarSpeed = {
-              min: 15,
+              min: 10,
               max: 20
           },
           shootingStarOpacityDelta = 0.01,
           trailLengthDelta = 0.01,
           shootingStarEmittingInterval = 2000,
           shootingStarLifeTime = 500,
-          maxTrailLength = 300,
+          maxTrailLength = 350,
           starBaseRadius = 2,
-          shootingStarRadius = 3,
+          shootingStarRadius = 5,
           paused = false;
 
       //Create all stars
@@ -174,7 +180,7 @@ export default function outerSpace() {
       }
 
       function drawStar(star) {
-          context.fillStyle = "rgb(255, 221, 157)";
+          context.fillStyle = "rgb(255, 157, 189)";
           context.beginPath();
           context.arc(star.x, star.y, star.radius, 0, Math.PI * 2, false);
           context.fill();
