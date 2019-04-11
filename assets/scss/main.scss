@@ -1,4 +1,5 @@
-@import 'variables/colors.scss';
+@import 'variables/_colors.scss';
+@import 'variables/_classes.scss';
 
 /* Fade page transition animation: */
 .layout-enter-active, .layout-leave-active {
@@ -8,6 +9,14 @@
   opacity: 0
 }
 
+#app.application.theme--dark {
+  background-color: $black-value;
+}
+
+.v-toolbar__content {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 
 /* Default element styles. */
 a {
@@ -15,7 +24,7 @@ a {
   color: $white-value;
 
   &:hover {
-    color: $black-value;
+    color: $secondary-color;
   }
 }
 
