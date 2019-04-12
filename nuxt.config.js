@@ -71,7 +71,7 @@ export default {
   // Global css:
   css: [
     '~/assets/style/app.styl',
-    { '~/assets/scss/main.scss', lang: 'scss' }
+    '~/assets/scss/main.scss'
   ],
 
   // Loaded before app mounts:
@@ -83,16 +83,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    ['@nuxtjs/markdownit', { linkify: true }],
-    ['nuxt-fontawesome', {
-    component: 'fa',
-    imports: [
-      {
-        set: '@fortawesome/fontawesome-free-brands',
-        icons: ['faGitkraken', 'faLinkedin', 'faTwitter']
-      }
-    ]
-  }]
+    ['@nuxtjs/markdownit', { linkify: true }]
   ],
 
   // Axios module:
