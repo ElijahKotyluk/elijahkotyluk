@@ -21,7 +21,7 @@
 <script>
 import BlogPostCard from '~/components/blog/BlogPostCard.vue';
 
-import TestOne from '~/static/markdownFiles/testone.md';
+import NuxtBlogWithMd from '~/static/markdownFiles/nuxtblogwithmd.md';
 // <div class="dynamic-markdown-content" v-html="content" />
 
 export default {
@@ -30,13 +30,13 @@ export default {
   },
   data () {
     return {
-      content: TestOne,
+      content: NuxtBlogWithMd,
       posts: [
         {
           img: require('~/static/photos/blogs/nuxtMDpost.png'),
           title: 'Markdown blog with Nuxt:',
           date: '3/23/2019',
-          to: '/posts/testone',
+          to: '/posts/nuxtblogwithmd',
           description: 'In my first blog post I will show you how to create a static blog site with Nuxt and markdown files.'
         },
         {
@@ -48,6 +48,36 @@ export default {
         }
       ]
     }
-  }
+  },
+  transition: 'page'
 }
 </script>
+
+<style lang="scss">
+.page-enter-active {
+  animation: acrossIn 1.5s ease-out both;
+}
+.page-leave-active {
+  animation: acrossOut 1.7s ease-in both;
+}
+@keyframes acrossIn {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes acrossOut {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+}
+</style>

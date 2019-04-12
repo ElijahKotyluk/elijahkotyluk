@@ -27,13 +27,40 @@ export default {
   async asyncData ({params}) {
 
     const fileContent = await import(`~/static/markdownFiles/${params.slug}.md`)
-    
+
     return {
       content: fileContent
     }
-  }
+  },
+  transition: 'page'
 }
 </script>
 
-<style>
+<style lang="scss">
+.page-enter-active {
+  animation: acrossIn 1.5s ease-out both;
+}
+.page-leave-active {
+  animation: acrossOut 1.7s ease-in both;
+}
+@keyframes acrossIn {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes acrossOut {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+}
 </style>

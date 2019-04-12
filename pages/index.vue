@@ -1,84 +1,63 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-      <v-card
-        width="350"
-        color="rgba(0, 0, 0, 0)"
-        elevation="0">
+  <v-container fill-height>
+    <tentacles />
+    <v-layout
+      column
+      justify-center
+      align-center
+      >
+      <v-flex xs12 sm6 md6 xl6>
+        <v-container class="circle">
+          <about />
+        </v-container>
+      </v-flex>
+    </v-layout>
 
-        <!-- Avatar -->
-        <v-layout column align-center>
-          <v-avatar class="elevation-12 mt-5 mb-1"
-                    size="185"
-                    id="avatar">
-            <img src="../static/photos/me.png" alt="avatar" />
-          </v-avatar>
+  </v-container>
 
-          <div class="text-xs-center mt-4">
-            <p class="subheading">
-              developer - 26 - Davis, CA
-            </p>
-          </div>
-        </v-layout>
-
-        <!-- Social Links -->
-        <social-bar />
-      </v-card>
-
-      <div class="text-xs-center mt-3">
-        <v-btn
-          class="mb-4"
-          color="rgba(12, 183, 207, .2)"
-          nuxt
-          to="/blog"
-          >
-          My Blog
-        </v-btn>
-        <p>
-          This site is powered by:
-        </p>
-        <nuxt-logo />
-        <vuetify-logo />
-      </div>
-
-    </v-flex>
-  </v-layout>
 </template>
 
 <script>
-import NuxtLogo from '~/components/animations/NuxtLogo.vue';
-import VuetifyLogo from '~/components/animations/VuetifyLogo.vue';
-import SocialBar from '~/components/widgets/SocialBar.vue';
+import About from '~/components/sections/About.vue';
+import Tentacles from '~/components/animations/Tentacles.vue';
 
 export default {
   components: {
-    NuxtLogo,
-    SocialBar,
-    VuetifyLogo
-  }
+    About,
+    Tentacles
+  },
+  transition: 'page'
 }
 </script>
 
 <style lang="scss">
-
-.social-link {
-  color: black;
+.circle {
+  border-radius: 50%;
 }
-
-.fab-linkedin g g path {
-  stroke: white;
-  stroke-width: 2;
+.page-enter-active {
+  animation: acrossIn 1.5s ease-out both;
 }
-
-svg.svg-inline--fa:hover {
-  color: rgba(0, 0, 0, 1);
+.page-leave-active {
+  animation: acrossOut 1.7s ease-in both;
+}
+@keyframes acrossIn {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes acrossOut {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
 }
 </style>
