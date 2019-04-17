@@ -12,7 +12,7 @@
             aspect-ratio="2.75"
             ></v-img>
 
-          <v-card-title primary-title>
+          <v-card-title class="justify-center">
             <p class="headline mb-0"> {{ title }} </p>
           </v-card-title>
 

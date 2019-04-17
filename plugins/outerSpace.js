@@ -180,7 +180,7 @@ export default function outerSpace() {
       }
 
       function drawStar(star) {
-          context.fillStyle = "rgb(255, 157, 189)";
+          context.fillStyle = "rgba(147, 54, 90, 0.7)";
           context.beginPath();
           context.arc(star.x, star.y, star.radius, 0, Math.PI * 2, false);
           context.fill();
@@ -216,7 +216,7 @@ export default function outerSpace() {
           context.fill();
 
           //trail
-          context.fillStyle = "rgba(255, 221, 157, " + p.opacity + ")";
+          context.fillStyle = "rgba(232, 109, 139,  " + p.opacity + ")";
           context.beginPath();
           context.moveTo(x - 1, y - 1);
           context.lineTo(pos.x, pos.y);

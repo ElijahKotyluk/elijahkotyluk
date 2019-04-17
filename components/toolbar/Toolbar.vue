@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Brand from '~/components/animations/Brand.vue';
+import Brand from './Brand.vue';
 import ToolbarMenu from './ToolbarMenu.vue';
 
 export default {

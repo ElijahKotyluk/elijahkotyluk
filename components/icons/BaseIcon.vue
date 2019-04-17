@@ -35,7 +35,7 @@ export default {
     },
     iconColor: {
       type: String,
-      default: 'rgba(0, 0, 0, 0)'
+      default: 'rgba(0, 0, 0, 1)'
     },
     strokeColor: {
       type: String,
@@ -59,6 +59,6 @@ svg {
 }
 
 :hover {
-  stroke: #000;
+  stroke: rgba(147, 7, 7, 1);
 }
 </style>

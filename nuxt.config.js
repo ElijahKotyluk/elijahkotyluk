@@ -15,7 +15,7 @@ function createRoutesArray() {
     routesArray.push(route)
   });
 }
-
+/*
 function returnRoutes() {
   dir.readFiles('./static/markdownFiles', {
     match: /.md$/,
@@ -37,7 +37,7 @@ function returnRoutes() {
             return path
         });
     });
-}
+} */
 
 function getSlugs(post, index) {
   let slug = post.substr(0, post.lastIndexOf('.'));
@@ -66,7 +66,7 @@ export default {
   },
 
   // Customize progress-bar color:
-  loading: { color: '#07657e' },
+  loading: '~/components/animations/Loading.vue'
 
   // Global css:
   css: [

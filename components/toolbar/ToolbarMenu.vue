@@ -10,7 +10,7 @@
      <v-menu class="hidden-sm-and-up pr-4">
        <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
        <v-list>
-         <v-list-tile v-for="item in menu" :key="item.id" @click="$vuetify.goTo(item.id, { offset: -85 })">
+         <v-list-tile v-for="item in menu" :key="item.id" :to="item.to">
            <v-list-tile-content>
              <v-list-tile-title>
                {{ item.title }}
@@ -36,10 +36,6 @@ export default {
         {
           title: 'Blog',
           to: '/blog'
-        },
-        {
-          title: 'Timeline',
-          to: '#timeline'
         }
       ]
     }

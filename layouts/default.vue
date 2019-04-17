@@ -2,8 +2,6 @@
   <v-app dark>
     <toolbar :title="title" />
 
-    <background />
-
     <stars />
     <v-content>
       <nuxt />
@@ -13,17 +11,16 @@
 
 <script>
 import Toolbar from '~/components/toolbar/Toolbar.vue';
-import Background from '~/components/animations/Background.vue';
 import Stars from '~/components/animations/Stars.vue';
 
 export default {
   components: {
     Stars,
-    Toolbar,
-    Background
+    Toolbar
   },
   data() {
     return {
+      isIndex: true,
       items: [
         {
           icon: 'apps',
