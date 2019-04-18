@@ -180,7 +180,7 @@ export default function outerSpace() {
       }
 
       function drawStar(star) {
-          context.fillStyle = "rgba(147, 54, 90, 0.7)";
+          context.fillStyle = "rgba(46, 153, 181, 0.7)";
           context.beginPath();
           context.arc(star.x, star.y, star.radius, 0, Math.PI * 2, false);
           context.fill();
