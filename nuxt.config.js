@@ -6,38 +6,15 @@ const dir = require('node-dir');
 const fs = require('fs');
 const routesArray = [];
 
-var files = fs.readdirSync('./static/markdownFiles');
+const files = fs.readdirSync('./static/markdownFiles');
 
 function createRoutesArray() {
   files.forEach(function (file) {
-    var name = file.substr(0, file.lastIndexOf('.'));
-    var route = '/posts/' + name
+    let name = file.substr(0, file.lastIndexOf('.'));
+    let route = '/posts/' + name
     routesArray.push(route)
   });
 }
-/*
-function returnRoutes() {
-  dir.readFiles('./static/markdownFiles', {
-    match: /.md$/,
-    shortName: true,
-    exclude: /^\./
-    }, function(err, content, next) {
-        if (err) throw err;
-
-        console.log('content:', content);
-
-        next();
-    },
-    function(err, files){
-        if (err) throw err;
-
-        files.forEach(function (file) {
-            var name = file.substr(0, file.lastIndexOf('.'));
-            var path = '/posts/' + name
-            return path
-        });
-    });
-} */
 
 function getSlugs(post, index) {
   let slug = post.substr(0, post.lastIndexOf('.'));
@@ -90,9 +67,7 @@ export default {
   axios: {},
 
   // Transitions:
-  transition : {
-    name: 'layout'
-  },
+  transition : {},
 
   // Generate static routes:
   generate: {
