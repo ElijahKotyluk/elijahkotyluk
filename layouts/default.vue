@@ -20,33 +20,6 @@ export default {
   },
   data() {
     return {
-      isIndex: true,
-      items: [
-        {
-          icon: 'apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'bubble_chart',
-          title: 'Blog',
-          to: '/blog'
-        }
-      ],
-      blogs: [
-        {
-          icon: 'comment',
-          title: 'Blog-post-1',
-          to: '/posts/testone'
-        },
-        {
-          icon: 'comment',
-          title: 'Blog-post-2',
-          to: '/posts/testtwo'
-        }
-      ],
-      right: true,
-      rightDrawer: false,
       title: 'elijahkotyluk.com'
     }
   },
